@@ -22,12 +22,31 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render("product-create-form")
+		let newId = 0;
+    	products.forEach((item) => {
+      	if (item.id > newId) {
+        	newId = item.id;
+      }
+    });
+    res.render("product-create-form", { newId });
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		// Do the magic
+		let idDef = req.params.id;
+
+		
+		let newProduct = {
+			id: idDef,
+			...req.body,
+			image:"image.png",
+		};
+		console.log(newProduct);
+		products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products), "utf-8");
+		res.redirect('/products')
+		
+		
 	},
 
 	// Update - Form to edit
