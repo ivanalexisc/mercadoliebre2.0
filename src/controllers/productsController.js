@@ -86,7 +86,7 @@ const controller = {
         }
 
         products.splice(producto_encontrado-1,1);
-        fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"),JSON.stringify(products, null, " "),"utf-8");
+		guardar(products);
         console.log(products);
         res.redirect('/products');
     }
