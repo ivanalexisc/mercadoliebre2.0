@@ -36,7 +36,7 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		const { name, price, discount, category, description } = req.body;
-		let product = {
+		let newProduct = {
 		  id: products[products.length - 1].id + 1, 
 		  name,
 		  description,
@@ -45,7 +45,7 @@ const controller = {
 		  image: "default-image.png",
 		  category,
 		};
-		products.push(product);
+		products.push(newProduct);
 		guardar(products);
 		res.redirect('/products');
 
@@ -59,13 +59,37 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		const {name, price, description, discount, category} = req.body;
+		products.forEach(product => {
+			if (product.id === req.params.id) {
+				product.name = name,
+				product.price = price,
+				product.discount = discount,
+				product.category = category,
+				product.description = description
+			
+				
+			}
+		})
+		products.push(products);
+		guardar(products);
+		console.log(products);
+		res.redirect('/products');
 	},
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		// Do the magic
-	}
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].id == req.params.id) {
+                producto_encontrado = products[i];
+            }
+        }
+
+        products.splice(producto_encontrado-1,1);
+        fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"),JSON.stringify(products, null, " "),"utf-8");
+        console.log(products);
+        res.redirect('/products');
+    }
 };
 
 module.exports = controller;
