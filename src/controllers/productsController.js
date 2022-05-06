@@ -79,16 +79,11 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-        for (let i = 0; i < products.length; i++) {
-            if (products[i].id == req.params.id) {
-                producto_encontrado = products[i];
-            }
-        }
-
-        products.splice(producto_encontrado-1,1);
-		guardar(products);
-        console.log(products);
+       const productDeleted = req.params.id;
+	   const productsFinal = products.filter(producto => producto.id != productDeleted);
+	   guardar(productsFinal);
         res.redirect('/products');
+       
     }
 };
 
