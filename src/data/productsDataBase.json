@@ -1,12 +1,11 @@
 [
  {
-  "id": 3,
-  "name": "Samsung Galaxy S10",
-  "price": 72999,
-  "discount": 25,
+  "name": "samsung galaxy s12",
+  "price": "15000",
+  "discount": "20",
   "category": "in-sale",
-  "description": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenidos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.",
-  "image": "img-samsung-galaxy-s10.jpg"
+  "description": "un celular increible",
+  "id": "3"
  },
  {
   "id": 4,

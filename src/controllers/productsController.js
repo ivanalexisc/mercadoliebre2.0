@@ -59,21 +59,14 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		const {name, price, description, discount, category} = req.body;
-		products.forEach(product => {
-			if (product.id === req.params.id) {
-				product.name = name,
-				product.price = price,
-				product.discount = discount,
-				product.category = category,
-				product.description = description
-			
-				
+		req.body.id = req.params.id;
+		productsUpdate = products.map(producto => {
+			if (producto.id == req.body.id){
+				return producto = req.body;
 			}
+			return producto;
 		})
-		products.push(products);
-		guardar(products);
-		console.log(products);
+		guardar(productsUpdate);
 		res.redirect('/products');
 	},
 
