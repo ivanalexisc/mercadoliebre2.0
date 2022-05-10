@@ -35,19 +35,16 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		const { name, price, discount, category, description } = req.body;
+		
 		let newProduct = {
 		  id: products[products.length - 1].id + 1, 
-		  name,
-		  description,
-		  price,
-		  discount,
-		  image: "default-image.png",
-		  category,
-		};
+		  ...req.body,
+		  image: req.file.filename
+		}
 		products.push(newProduct);
 		guardar(products);
 		res.redirect('/products');
+	
 
        
     },

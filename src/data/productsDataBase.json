@@ -1,13 +1,5 @@
 [
  {
-  "name": "samsung galaxy s12",
-  "price": "15000",
-  "discount": "20",
-  "category": "in-sale",
-  "description": "un celular increible",
-  "id": "3"
- },
- {
   "id": 4,
   "name": "Heladera no frost Whirlpool WRM45A",
   "description": "Disfrutá de la frescura de tus alimentos y almacenalos de manera práctica y cómoda en tu heladera Whirlpool, la protagonista de tu cocina. Su sistema no frost evita la generación de escarcha y te permitirá conservar el sabor y las propiedades nutritivas de los productos.A su vez, su freezer cuenta con una capacidad de 86 litros, que facilitará la distribución y el orden de tus congelados para que no te preocupes por la falta de espacio.",
@@ -123,36 +115,5 @@
   "category": "in-sale",
   "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
   "image": "img-parlante-sony.jpg"
- },
- {
-  "id": 17,
-  "image": "default-image.png"
- },
- {
-  "id": 18,
-  "name": "ivan",
-  "description": "asdsadsa",
-  "price": "5678",
-  "discount": "123",
-  "image": "default-image.png",
-  "category": "in-sale"
- },
- {
-  "id": 19,
-  "name": "zapatillas ",
-  "description": "asdasdasdas",
-  "price": "1500",
-  "discount": "15",
-  "image": "default-image.png",
-  "category": "in-sale"
- },
- {
-  "id": 20,
-  "name": "remera de mujer",
-  "description": "una remera de mujer excelente",
-  "price": "5000",
-  "discount": "10",
-  "image": "default-image.png",
-  "category": "in-sale"
  }
 ]
